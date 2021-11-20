@@ -1,5 +1,5 @@
 function header(isManager, headerContent, loginType) {
-    document.write("<title>在线考试系统</title>");
+    document.write("<head><title>在线考试系统</title></head>");
     document.write("<div class=\"header\">");
     document.write("<div style=\"float: left;font-weight: bolder;\"><a href=\"/iqds/\"><img src=\"./icons/题库编写.png\"");
     document.write("style=\"vertical-align:middle;height:100%\">在线考试系统</a></div>");

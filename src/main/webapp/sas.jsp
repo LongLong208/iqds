@@ -19,7 +19,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Java Web面试题库系统</title>
+
     <link rel="stylesheet" type="text/css" href="others/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <%-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> --%>

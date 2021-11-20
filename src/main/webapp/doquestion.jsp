@@ -34,7 +34,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Java Web面试题库系统</title>
+
     <link rel="stylesheet" type="text/css" href="others/layui/css/layui.css" media="all">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
 
