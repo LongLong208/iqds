@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- 
+  <servlet>
+    <servlet-name>    </servlet-name>
+    <servlet-class>   </servlet-class>
+
+    <init-param>
+      <param-name>    </param-name>
+      <param-value>   </param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>    </param-name>
+      <param-value>   </param-value>
+    </init-param>
+
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>    </servlet-name>
+    <url-pattern>     </url-pattern>
+  </servlet-mapping>
+-->
+
+  <!-- 
+    <filter>
+    <filter-name>    </filter-name>
+    <filter-class>   </filter-class>
+    <init-param>
+      <param-name>    </param-name>
+      <param-value>   </param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>    </filter-name>
+    <url-pattern>    </url-pattern>
+  </filter-mapping> 
+-->
+
+  <filter>
+    <filter-name>AllFilter</filter-name>
+    <filter-class>filters.AllFilter</filter-class>
+    <init-param>
+      <param-name>Encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>AllFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>DoQuestionFilter</filter-name>
+    <filter-class>filters.DoQuestionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>DoQuestionFilter</filter-name>
+    <url-pattern>/doquestion.jsp</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>MeFilter</filter-name>
+    <filter-class>filters.MeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MeFilter</filter-name>
+    <url-pattern>/me.jsp</url-pattern>
+  </filter-mapping>
+
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MngServlet</servlet-name>
+    <servlet-class>servlets.MngServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MngServlet</servlet-name>
+    <url-pattern>/manager</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>servlets.Test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserMng</servlet-name>
+    <servlet-class>servlets.MngPage.UserMng</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserMng</servlet-name>
+    <url-pattern>/usermng</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>QuestionMng</servlet-name>
+    <servlet-class>servlets.MngPage.QuestionMng</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuestionMng</servlet-name>
+    <url-pattern>/questionmng</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>QuestionInsert</servlet-name>
+    <servlet-class>servlets.InsertPage.QuestionInsert</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuestionInsert</servlet-name>
+    <url-pattern>/questioninsert</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>servlets.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LookAnswer</servlet-name>
+    <servlet-class>servlets.LookAnswer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LookAnswer</servlet-name>
+    <url-pattern>/lookanswer</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>QuestionUpdate</servlet-name>
+    <servlet-class>servlets.UpdatePage.QuestionUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuestionUpdate</servlet-name>
+    <url-pattern>/questionupdate</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DoQuestion</servlet-name>
+    <servlet-class>servlets.DoQuestion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoQuestion</servlet-name>
+    <url-pattern>/doquestion</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DoneQuestion</servlet-name>
+    <servlet-class>servlets.DoneQuestion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoneQuestion</servlet-name>
+    <url-pattern>/donequestion</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>me</servlet-name>
+    <servlet-class>servlets.me</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>me</servlet-name>
+    <url-pattern>/me</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>servlets.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CheckUserName</servlet-name>
+    <servlet-class>servlets.CheckUserName</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckUserName</servlet-name>
+    <url-pattern>/checkusername</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>servlets.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ChangePower</servlet-name>
+    <servlet-class>servlets.UpdatePage.ChangePower</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangePower</servlet-name>
+    <url-pattern>/changepower</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TestChosen</servlet-name>
+    <servlet-class>servlets.TestChosen</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestChosen</servlet-name>
+    <url-pattern>/chosen</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FinishTest</servlet-name>
+    <servlet-class>servlets.FinishTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FinishTest</servlet-name>
+    <url-pattern>/finishtest</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SearchQuestion</servlet-name>
+    <servlet-class>servlets.SearchPage.SearchQuestion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchQuestion</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>WrongQuestion</servlet-name>
+    <servlet-class>servlets.WrongQuestion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WrongQuestion</servlet-name>
+    <url-pattern>/wrongquestion</url-pattern>
+  </servlet-mapping>
+
+</web-app>
