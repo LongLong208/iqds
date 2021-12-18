@@ -57,7 +57,6 @@ public class DoQuestion extends HttpServlet {
         int[] randoms;
         switch (mode) {
             case "test":
-                quNum = 10;
                 String userId = "" + (int) session.getAttribute("userId");
                 TestRecord tr = (TestRecord) application.getAttribute(userId);
                 if (tr != null) {
@@ -75,6 +74,7 @@ public class DoQuestion extends HttpServlet {
                 questionAll = QuestionDAO.checkAll(0);
                 randoms = Randoms.getRandoms(questionAll.size());
 
+                quNum = 10 > questionAll.size() ? questionAll.size() : 10;
                 for (int i = 0; i < quNum; ++i) {
                     questions.add(questionAll.get(randoms[i]));
                 }
@@ -89,9 +89,9 @@ public class DoQuestion extends HttpServlet {
                 response.sendRedirect("/iqds/doquestion.jsp");
                 break;
             case "casual":
-                quNum = 5;
                 questionAll = QuestionDAO.checkAll(0);
                 randoms = Randoms.getRandoms(questionAll.size());
+                quNum = 5 > questionAll.size() ? questionAll.size() : 5;
 
                 for (int i = 0; i < quNum; ++i) {
                     questions.add(questionAll.get(randoms[i]));
