@@ -105,13 +105,15 @@
         }
         function InsertNew(type) {
             $.post('/iqds/pages/forms/' + type + '.jsp', {}, function(str){
+                var width = '640px';
+                var height = '700px';
                 layer.open({
                     type: 0,
                     title: '添加',
                     content: str,
                     btn: ['确认', '取消'],
                     skin: 'layui-layer-rim',
-                    area: ['640px', '700px'],
+                    area: [width, height],
                     yes: function (index, layero) {
                         $.ajax({
                             type: "POST",
@@ -260,8 +262,10 @@
     <div class="container">
             <div id="navbar">
                 <ul id="navbarul">
-                    <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/usermng')">用户管理</div></li>
+                    <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/usermng')">学生管理</div></li>
                     <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/questionmng')">题库管理</div></li>
+                    <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/papermng')">试卷管理</div></li>
+                    <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/exammng')">考试管理</div></li>
                 </ul>
             </div>
             <div id="contentright"></div>

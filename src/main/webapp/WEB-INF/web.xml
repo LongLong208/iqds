@@ -119,6 +119,19 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>PaperMng</servlet-name>
+    <servlet-class>servlets.MngPage.PaperMng</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PaperMng</servlet-name>
+    <url-pattern>/papermng</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+  <servlet>
     <servlet-name>QuestionInsert</servlet-name>
     <servlet-class>servlets.InsertPage.QuestionInsert</servlet-class>
   </servlet>

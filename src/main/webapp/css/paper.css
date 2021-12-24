@@ -1,0 +1,13 @@
+.leftBar {
+    /* position: fixed;  */
+    /* flex: 1; */
+    /* padding: 2px; */
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    /* border-radius: 10px; */
+    position: fixed;
+    background: rgb(249, 249, 249);
+    width: 10%;
+    height: calc(100vh - 50px);
+}

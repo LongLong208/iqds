@@ -62,15 +62,68 @@ create table knowledge(
 use iqds;
 drop table if exists questionDone;
 create table questionDone(
-    questionId int,
+    questionId int primary key auto_increment,
     userId int,
     doneTimes int default '0',
     correctTimes int default '0',
 
-    primary key(questionId, userId),
     foreign key(userId) references user(userId),
     foreign key(questionId) references question(questionId)
 );
+
+
+-- 试卷表
+use iqds;
+drop table if exists paper;
+create table paper(
+    paperId int primary key auto_increment,
+    paperName varchar(256)
+
+);
+
+-- 考试表
+use iqds;
+drop table if exists exam;
+create table exam(
+    examId int primary key auto_increment,
+    examName varchar(256),
+    paperId int,
+    beginTime date,
+    duration int,
+
+    foreign key(paperId) references paper(paperId)
+
+);
+
+
+
+
+-- 试卷-题目表
+use iqds;
+drop table if exists paperQuestion;
+create table paperQuestion(
+    paperQuestionId int primary key auto_increment,
+    paperId int,
+    questionId int,
+
+    foreign key(paperId) references paper(paperId),
+    foreign key(questionId) references question(questionId)
+);
+
+
+-- 用户考试表
+use iqds;
+drop table if exists userExam;
+create table userExam(
+    userExamId int primary key auto_increment,
+    userId int,
+    examId int,
+
+    foreign key(userId) references user(userId),
+    foreign key(examId) references exam(examId)
+);
+
+
 
 
 /**** TEMPLE ****

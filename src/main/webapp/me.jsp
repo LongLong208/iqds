@@ -32,7 +32,7 @@
                 int klId = kls.get(i).getKnowledgeId();
                 if(!"简答题".equals(kls.get(i).getKnowledgeName()))
                 {
-                    %><%=100*(cq.containsKey(klId)? cq.get(klId):0) / tq.get(klId)%><%
+                    %><%=100*(cq.containsKey(klId) ? cq.get(klId) : 0) / (tq.containsKey(klId) ? tq.get(klId) : 1)%><%
                     if(i < kls.size() - 1){
                         %>,<%
                     }
@@ -73,7 +73,7 @@
                         <div class="layui-card-body">
                             <%=kl.getKnowledgeName() %> <a class="layui-btn layui-btn-primary" type="button" href='/iqds/doquestion?mode=special&knowledgeId=<%=klId%>'>专项练习</a>
                             <div class="layui-progress layui-progress-big" lay-showPercent="yes">
-                                <div name="bar" class="layui-progress-bar layui-bg-green" style="text-align: center;width:0%"><div style="color:black"><%=cq.containsKey(klId)?cq.get(klId):0%>/<%=tq.get(klId)%></div></div>
+                                <div name="bar" class="layui-progress-bar layui-bg-green" style="text-align: center;width:0%"><div style="color: #ff9900;text-shadow: 0px 0px 5px #000000;"><%=cq.containsKey(klId)?cq.get(klId):0%>/<%=tq.get(klId)%></div></div>
                             </div>
                         </div>
             <%
