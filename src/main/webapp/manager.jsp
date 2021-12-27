@@ -264,8 +264,8 @@
                 <ul id="navbarul">
                     <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/usermng')">学生管理</div></li>
                     <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/questionmng')">题库管理</div></li>
-                    <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/papermng')">试卷管理</div></li>
-                    <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/exammng')">考试管理</div></li>
+                    <%-- <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/papermng')">试卷管理</div></li>
+                    <li><div class="buttondiv" onclick="ajaxGetRight('/iqds/exammng')">考试管理</div></li> --%>
                 </ul>
             </div>
             <div id="contentright"></div>

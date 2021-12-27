@@ -105,7 +105,7 @@
             <br>
             <form id="rgform" action="/iqds/register" method="post" style="width:fit-content;" onsubmit='return checkAll()'>
                 <table>
-                <tr ><td>用户名：</td><td><input id="Name" type="text" name="userName" onblur="checkUserName()"></td></tr>
+                <tr><td>用户名：</td><td><input id="Name" type="text" name="userName" onblur="checkUserName()"></td></tr>
                 <tr><td>密码：</td><td><input id="pwd" type="password" name="userPwd" onblur="checkPwd()"></td></tr>
                 <tr><td>重复密码：</td><td><input id="pwdcon" type="password" name="userPwdCon" onblur="checkPwdCon()"></td></tr>
                 </table>

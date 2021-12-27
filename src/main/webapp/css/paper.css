@@ -2,12 +2,37 @@
     /* position: fixed;  */
     /* flex: 1; */
     /* padding: 2px; */
-    font-size: 20px;
+    font-size: 16px !important;
     float: left;
-    text-align: center;
+    /* text-align: center; */
     /* border-radius: 10px; */
     position: fixed;
-    background: rgb(249, 249, 249);
-    width: 10%;
+    /* background-color: rgba(249, 249, 249, 0.562); */
+    background: #e2e2e2;
+    width: 20%;
     height: calc(100vh - 50px);
+}
+
+.leftBar div {
+    font-size: inherit;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.leftBar form {
+    font-size: inherit;
+}
+
+.paperProperty {
+    background: #56d1fa3d;
+    margin: 0 0 5px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.middle {
+    /* background: red; */
+    width: 80%;
+    height: 100%;
+    padding-left: 20%;
 }
